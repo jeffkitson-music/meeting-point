@@ -25,7 +25,7 @@ With so many modern ways of communicating, it's likely this tool wouldn't be nec
 - Uses Google Maps for directions. Some may take issue with that due to privacy concerns.
 - Requires SSL (https://) to get/set coordinates. This is an HTML5 requirement.
 
-## :eyes: Usage
+## :walking_man: Usage
 Leader or designated group members can set the next meeting point by using set.html.
 The demo password is "helloworld" and can easily be changed by placing the SHA-256 hash of the desired password in the pwh.txt file.
 
