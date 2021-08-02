@@ -12,7 +12,7 @@ Most of these meeting points are landmarks without specific addresses.
 Thankfully everyone on my trips has found their way back to the meeting point on time thus far. But what if eventually someone gets lost?
 With so many modern ways of communicating, it's likely this tool wouldn't be necessary. I wanted to implement it anyway - for learning!
 
-## :map: Details
+## :world_map: Details
 ### Hypothetical scenarios
 - A few members of your group wander off without paying particular attention to the details of the meeting point and time.
 - The meeting point has to change at the last minute.
