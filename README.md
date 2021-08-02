@@ -18,7 +18,7 @@ With so many modern ways of communicating, it's likely this tool wouldn't be nec
 - The meeting point has to change at the last minute.
 - General directions can be difficult, coordinates are specific.
 - Helps avoid groupthink/memory. Everyone can see the correct meeting place/time with a quick web hit on their device.
-- Wait, which way was that statue again?! 
+- Wait, which way was that statue again?
 
 ### Limitations
 - Members of your group need internet access in the field. This can be difficult in remote and/or foreign locations.
