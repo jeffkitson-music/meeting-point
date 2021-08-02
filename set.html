@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set the Beacon</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+<style>
+body {
+    font-family: 'Lato';font-size: 22px;
+}
+.button {
+  background-color: #006747; /* Bottle Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Lato';
+}
+input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Lato';
+}input[type=time] {
+  font-family: 'Lato';
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button {
+  background-color: #006747; /* Bottle Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+</head>
+<body>
+<body onload="getLocation()">
+
+<p id="demo"></p>
+<center>
+<img src="lighthouse.png" alt="lighthouse">
+<h2>Set the Meeting Point</h2>
+
+<form action="location-set.php" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="lat">Latitude:</label><br>
+  <input type="text" id="lat" name="lat"><br>
+  <label for="long">Longitude:</label><br>
+  <input type="text" id="long" name="long"><br><br>
+  <label for="appt">Meeting Time:</label><br>
+  <input type="time" id="appt" name="appt"><br><br>
+    <label for="pw">Password:</label><br>
+  <input type="password" id="pw" name="pw"><br><br>
+  <input type="submit" class="button" value="Submit">
+</form>
+</center>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+ // x.innerHTML = "Latitude: " + position.coords.latitude +
+  //"<br>Longitude: " + position.coords.longitude;
+
+  // mine
+  var lat = position.coords.latitude;
+  var long = position.coords.longitude;
+document.getElementById("lat").value = lat;
+document.getElementById("long").value = long;
+document.getElementById("appt").value = getTime(); //"13:45
+
+}
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+
+function getTime(){
+	var d = new Date()
+    var e = d.toLocaleTimeString('it-IT',{ hour: '2-digit', minute: '2-digit' })
+    return e
+}
+</script>
+
+</body>
+</html>
