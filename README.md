@@ -1,7 +1,7 @@
 # 📌 Meeting Point
 Using HTML5's geolocation feature to help navigate to a meeting point in unfamiliar places.
 
-## :eyes: About
+## :compass: About
 Set a pair of geocoordinates as a virtual beacon for members of your travel party to find their way back if they become lost. 
 
 ## :books: Background
